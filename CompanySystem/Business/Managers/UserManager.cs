@@ -90,7 +90,7 @@ namespace Business.Managers
                     throw new Exception("User Not Found");
 
             if (existingUser.IsDeleted)
-                throw new Exception("User is arleady Deleted");
+                throw new Exception("User is already Deleted");
 
             existingUser.IsDeleted = true;
 

@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{54EE28D1-6209-4EC9-9485-4F02C3C78B5E}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{54EE28D1-6209-4EC9-9485-4F02C3C78B5E}" ItemName="Application" ConfigurationId="https" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="app/Controllers/WeatherForecastController.cs">
+    <Files>
+      <File FileName="app/Controllers/WeatherForecastController.cs" Line="27" Column="49" IsPinned="True" />
+      <File FileName="Business/Managers/DepartmentManager.cs" Line="37" Column="1" />
+      <File FileName="Business/Mapping/DepartmentMapping.cs" Line="26" Column="107" />
+      <File FileName="Infrastructure/Repositery/DepartmentRepositery.cs" Line="22" Column="12" />
+      <File FileName="Business/Interfaces/IDepartmentManager.cs" Line="15" Column="1" />
+      <File FileName="Infrastructure/Repositery/IDepartmentRepositery.cs" Line="8" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CompanySystemSolution" expanded="True" selected="True">
+            <Node name="Application">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="Business" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Managers" expanded="True" />
+              <Node name="Mapping" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="View" expanded="True" />
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Entities" expanded="True" />
+              <Node name="Repositery" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
