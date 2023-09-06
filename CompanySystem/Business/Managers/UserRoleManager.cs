@@ -45,8 +45,8 @@ namespace Business.Managers
             var role = await _repository.GetById(id) ??
                             throw new Exception("No User Roles");
 
-            if (role == null || role.IsDeleted == true)
-                return null;
+            if (role.IsDeleted == true)
+                throw new Exception("User Role is already Deleted");
 
             return role.EntityToView() ??
                     throw new Exception("Problem in converting Entity to View");
@@ -58,7 +58,7 @@ namespace Business.Managers
                                    throw new Exception("No User Roles");
 
             if (existingRole.IsDeleted == true)
-                throw new Exception("User Role is arleady Deleted");
+                throw new Exception("User Role is already Deleted");
 
             existingRole.Name = model.Name;
             existingRole.Description = model.Description;
@@ -77,7 +77,7 @@ namespace Business.Managers
                                    throw new Exception("No User Roles");
 
             if (existingRole.IsDeleted == true)
-                throw new Exception("User Role is arleady Deleted");
+                throw new Exception("User Role is already Deleted");
 
             existingRole.IsDeleted = true;
 

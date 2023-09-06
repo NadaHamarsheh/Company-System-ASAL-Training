@@ -33,7 +33,7 @@ namespace Business.Managers
                         throw new Exception("User Not Found");
 
             if (user.IsDeleted == true)
-                throw new Exception("User is arleady Deleted");
+                throw new Exception("User is already Deleted");
 
             return user.EntityToView() ??
                     throw new Exception("Problem in converting Entity to View");
@@ -41,6 +41,8 @@ namespace Business.Managers
 
         public async Task<IList<UserView>> GetUsersByUserRole(int id)
         {
+            _ = await _userRoleManager.GetUserRoleById(id);
+
             var users = await _repository.GetUsersByRole(id) ??
                            throw new Exception("Users are Not Found");
 
@@ -70,7 +72,9 @@ namespace Business.Managers
                                 throw new Exception("User Not Found");
 
             if (existingUser.IsDeleted == true)
-                throw new Exception("User is arleady Deleted");
+                throw new Exception("User is already Deleted");
+
+            _ = await _userRoleManager.GetUserRoleById(model.UserRoleId);
 
             existingUser.Email = model.Email;
             existingUser.Password = model.Password;

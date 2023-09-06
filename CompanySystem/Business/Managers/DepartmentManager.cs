@@ -31,7 +31,7 @@ namespace Business.Managers
                                 throw new Exception("No Department Found");
 
             if (department.IsDeleted == true)
-                throw new Exception("Department is arleady Deleted");
+                throw new Exception("Department is already Deleted");
 
             return department.EntityToView() ??
                     throw new Exception("Problem in converting Entity to View");
@@ -58,7 +58,7 @@ namespace Business.Managers
                                 throw new Exception("No Department Found");
 
             if (existingDepartment.IsDeleted == true)
-                throw new Exception("Department is arleady Deleted"); 
+                throw new Exception("Department is already Deleted"); 
 
             existingDepartment.Name = model.Name;
             existingDepartment.Description = model.Description;
@@ -77,7 +77,7 @@ namespace Business.Managers
                                 throw new Exception("No Department Found");
 
             if (existingDepartment.IsDeleted == true)
-                throw new Exception("Department is arleady Deleted");
+                throw new Exception("Department is already Deleted");
 
             existingDepartment.IsDeleted = true;
 

@@ -1,45 +1,41 @@
 ﻿<Properties StartupConfiguration="{A80CDEDA-4AEC-4233-8781-1C908B3A2792}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/nadahamarsheh/ASAL/CompanySystem/Application/Controllers/UserController.cs" relfile="Application/Controllers/UserController.cs" line="68" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Managers/UserManager.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Application/Controllers/UserController.cs">
     <Files>
-      <File FileName="Application/Controllers/UserController.cs" Line="64" Column="69" />
-      <File FileName="Business/Interfaces/IUserManager.cs" Line="10" Column="10" />
-      <File FileName="Business/Managers/UserManager.cs" Line="46" Column="1" />
-      <File FileName="Business/Mapping/UserMapping.cs" Line="30" Column="46" />
-      <File FileName="Infrastructure/Repository/IRepository.cs" Line="10" Column="42" />
-      <File FileName="Infrastructure/Repository/Repository.cs" Line="34" Column="10" />
+      <File FileName="Business/Managers/UserManager.cs" Line="40" Column="10" />
+      <File FileName="Application/Controllers/UserController.cs" Line="66" Column="27" />
+      <File FileName="Business/Managers/UserRoleManager.cs" Line="44" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CompanySystem" expanded="True">
+          <Node name="CompanySystem">
             <Node name="Application">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Controllers">
+                <Node name="UserController.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Business">
               <Node name="Interfaces" expanded="True" />
-              <Node name="Managers" expanded="True">
-                <Node name="UserManager.cs" selected="True" />
-              </Node>
               <Node name="Mapping" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="View" expanded="True" />
             </Node>
-            <Node name="Infrastructure">
+            <Node name="Infrastructure" expanded="True">
               <Node name="Entities" expanded="True" />
               <Node name="Repository" expanded="True" />
-              <Node name="SharedFiles" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

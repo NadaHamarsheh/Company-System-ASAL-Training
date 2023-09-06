@@ -32,7 +32,7 @@ namespace Application.Controllers
             }
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("User/{id:int}")]
         public async Task<ActionResult<UserView>> GetUserById(int id)
         {
             try
@@ -63,7 +63,7 @@ namespace Application.Controllers
             }
         }
 
-        [HttpGet("{roleId}")]
+        [HttpGet("Role/{roleId:int}")]
         public async Task<ActionResult<UserView>> GetUsersByUserRole(int roleId)
         {
             try
