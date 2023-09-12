@@ -41,7 +41,8 @@ namespace Business.Managers
 
         public async Task<IList<UserView>> GetUsersByUserRole(int id)
         {
-            _ = await _userRoleManager.GetUserRoleById(id);
+            _ = await _userRoleManager.GetUserRoleById(id) ??
+                        throw new Exception("User Role Not Found");
 
             var users = await _repository.GetUsersByRole(id) ??
                            throw new Exception("Users are Not Found");
@@ -53,7 +54,7 @@ namespace Business.Managers
         public async Task<UserView> CreateUser(UserModel model)
         {
             _ = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
-                                throw new Exception("User Role Not Found"); ;
+                        throw new Exception("User Role Not Found");
 
             var user = model.ModelToEntity() ??
                         throw new Exception("Problem in converting Model to Entity");
@@ -75,7 +76,8 @@ namespace Business.Managers
             if (existingUser.IsDeleted)
                 throw new Exception("User is already Deleted");
 
-            _ = await _userRoleManager.GetUserRoleById(model.UserRoleId);
+            _ = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
+                        throw new Exception("User Role Not Found");
 
             existingUser.Email = model.Email;
             existingUser.Password = model.Password;
