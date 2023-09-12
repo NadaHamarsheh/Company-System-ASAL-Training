@@ -30,7 +30,7 @@ namespace Business.Managers
             var department = await _repository.GetById(id) ??
                                 throw new Exception("No Department Found");
 
-            if (department.IsDeleted == true)
+            if (department.IsDeleted)
                 throw new Exception("Department is already Deleted");
 
             return department.EntityToView() ??
@@ -57,7 +57,7 @@ namespace Business.Managers
             var existingDepartment = await _repository.GetById(id) ??
                                 throw new Exception("No Department Found");
 
-            if (existingDepartment.IsDeleted == true)
+            if (existingDepartment.IsDeleted)
                 throw new Exception("Department is already Deleted"); 
 
             existingDepartment.Name = model.Name;

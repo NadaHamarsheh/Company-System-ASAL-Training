@@ -52,7 +52,8 @@ namespace Business.Managers
 
         public async Task<UserView> CreateUser(UserModel model)
         {
-            _ = await _userRoleManager.GetUserRoleById(model.UserRoleId);
+            _ = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
+                                throw new Exception("User Role Not Found"); ;
 
             var user = model.ModelToEntity() ??
                         throw new Exception("Problem in converting Model to Entity");
@@ -71,7 +72,7 @@ namespace Business.Managers
             var existingUser = await _repository.GetById(id) ??
                                 throw new Exception("User Not Found");
 
-            if (existingUser.IsDeleted == true)
+            if (existingUser.IsDeleted)
                 throw new Exception("User is already Deleted");
 
             _ = await _userRoleManager.GetUserRoleById(model.UserRoleId);

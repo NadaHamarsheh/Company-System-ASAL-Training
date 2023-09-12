@@ -45,7 +45,7 @@ namespace Business.Managers
             var role = await _repository.GetById(id) ??
                             throw new Exception("No User Roles");
 
-            if (role.IsDeleted == true)
+            if (role.IsDeleted)
                 throw new Exception("User Role is already Deleted");
 
             return role.EntityToView() ??
@@ -57,7 +57,7 @@ namespace Business.Managers
             var existingRole = await _repository.GetById(id) ??
                                    throw new Exception("No User Roles");
 
-            if (existingRole.IsDeleted == true)
+            if (existingRole.IsDeleted)
                 throw new Exception("User Role is already Deleted");
 
             existingRole.Name = model.Name;
@@ -76,7 +76,7 @@ namespace Business.Managers
             var existingRole = await _repository.GetById(id) ??
                                    throw new Exception("No User Roles");
 
-            if (existingRole.IsDeleted == true)
+            if (existingRole.IsDeleted)
                 throw new Exception("User Role is already Deleted");
 
             existingRole.IsDeleted = true;
