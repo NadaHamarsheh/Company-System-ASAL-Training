@@ -16,6 +16,6 @@ namespace Infrastructure
         [MaxLength(400)]
         public string Description { get; set; }
 
-        //public EmployeeDetail EmployeeDetails { get; set; }
+        public ICollection<EmployeeDetail> EmployeeDetails { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace Infrastructure
 
         [ForeignKey("DepartmentId")]
         public int DepartmentId { get; set; }
-        public ICollection<Department> Departments { get; set; }
+        public EmployeeDetail EmployeeDetails { get; set; }
     }
 }
 

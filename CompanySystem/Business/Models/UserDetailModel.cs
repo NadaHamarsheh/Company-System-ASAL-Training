@@ -1,18 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Infrastructure.SharedFiles;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Infrastructure
+namespace Business.Models
 {
-    [Table("UserDetail")]
-    public class UserDetail : TrackingData
+	public class UserDetailModel
 	{
-		[Key]
-		public int Id { get; set; }
-
+        [Required]
         [MaxLength(20)]
         public string FirstName { get; set; }
 
+        [Required]
         [MaxLength(20)]
         public string LastName { get; set; }
 
@@ -26,8 +22,5 @@ namespace Infrastructure
 
         [MaxLength(40)]
         public string Experience { get; set; }
-        
-        public User Users { get; set; }
     }
 }
-
