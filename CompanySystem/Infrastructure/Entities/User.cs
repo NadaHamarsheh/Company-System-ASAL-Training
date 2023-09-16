@@ -19,9 +19,13 @@ namespace Infrastructure
         [ForeignKey("UserRoleId")]
         public int UserRoleId { get; set; }
         public UserRole UserRole { get; set; }
-         
-        //[ForeignKey("user")]
-        //public int UserId { get; set; }
-        //public UserDetail UserDetails { get; set; } 
+
+        [ForeignKey("UserDetailId")]
+        public int UserDetailId { get; set; }
+        public UserDetail UserDetails { get; set; }
+
+        [ForeignKey("EmployeeDetailId")]
+        public int EmployeeDetailId { get; set; }
+        public EmployeeDetail EmployeeDetail { get; set; }
     }
 }

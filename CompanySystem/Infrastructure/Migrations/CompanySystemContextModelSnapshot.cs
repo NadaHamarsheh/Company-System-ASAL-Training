@@ -58,6 +58,48 @@ namespace Infrastructure.Migrations
                     b.ToTable("Department");
                 });
 
+            modelBuilder.Entity("Infrastructure.EmployeeDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("Salary")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.ToTable("EmployeeDetail");
+                });
+
             modelBuilder.Entity("Infrastructure.User", b =>
                 {
                     b.Property<int>("Id")
@@ -76,6 +118,9 @@ namespace Infrastructure.Migrations
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
+                    b.Property<int>("EmployeeDetailId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -89,14 +134,74 @@ namespace Infrastructure.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
+                    b.Property<int>("UserDetailId")
+                        .HasColumnType("int");
+
                     b.Property<int>("UserRoleId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EmployeeDetailId")
+                        .IsUnique();
+
+                    b.HasIndex("UserDetailId")
+                        .IsUnique();
+
                     b.HasIndex("UserRoleId");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("Infrastructure.UserDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Experience")
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("Photo")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Tel")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserDetail");
                 });
 
             modelBuilder.Entity("Infrastructure.UserRole", b =>
@@ -135,15 +240,57 @@ namespace Infrastructure.Migrations
                     b.ToTable("UserRole");
                 });
 
+            modelBuilder.Entity("Infrastructure.EmployeeDetail", b =>
+                {
+                    b.HasOne("Infrastructure.Department", "Department")
+                        .WithMany("EmployeeDetails")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+                });
+
             modelBuilder.Entity("Infrastructure.User", b =>
                 {
+                    b.HasOne("Infrastructure.EmployeeDetail", "EmployeeDetail")
+                        .WithOne("User")
+                        .HasForeignKey("Infrastructure.User", "EmployeeDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.UserDetail", "UserDetails")
+                        .WithOne("Users")
+                        .HasForeignKey("Infrastructure.User", "UserDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Infrastructure.UserRole", "UserRole")
                         .WithMany("Users")
                         .HasForeignKey("UserRoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("EmployeeDetail");
+
+                    b.Navigation("UserDetails");
+
                     b.Navigation("UserRole");
+                });
+
+            modelBuilder.Entity("Infrastructure.Department", b =>
+                {
+                    b.Navigation("EmployeeDetails");
+                });
+
+            modelBuilder.Entity("Infrastructure.EmployeeDetail", b =>
+                {
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Infrastructure.UserDetail", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Infrastructure.UserRole", b =>

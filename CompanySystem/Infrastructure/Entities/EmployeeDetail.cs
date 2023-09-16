@@ -16,9 +16,10 @@ namespace Infrastructure
 
         public DateTime EndDate { get; set; }
 
+        public User User { get; set; }
+
         [ForeignKey("DepartmentId")]
         public int DepartmentId { get; set; }
-        public EmployeeDetail EmployeeDetails { get; set; }
+        public Department Department { get; set; }
     }
 }
-

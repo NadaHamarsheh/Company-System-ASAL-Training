@@ -30,4 +30,3 @@ namespace Infrastructure
         public User Users { get; set; }
     }
 }
-
