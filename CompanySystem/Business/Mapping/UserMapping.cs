@@ -12,7 +12,9 @@ namespace Business.Mapping
             {
                 Email = model.Email,
                 Password = model.Password,
-                UserRoleId = model.UserRoleId
+                UserRoleId = model.UserRoleId,
+                UserDetailId = model.UserDetailId,
+                EmployeeDetailId = model.EmployeeDetailId
             };
         }
 
@@ -24,6 +26,8 @@ namespace Business.Mapping
                 Email = user.Email,
                 Password = user.Password,
                 UserRoleId = user.UserRoleId,
+                UserDetailId = user.UserDetailId,
+                EmployeeDetailId = user.EmployeeDetailId,
                 CreatedOn = user.CreatedOn,
                 CreatedBy = user.CreatedBy,
                 ModifiedOn = user.ModifiedOn,

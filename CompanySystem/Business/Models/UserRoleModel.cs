@@ -12,4 +12,3 @@ namespace Business.Models
         public string Description { get; set; }
     }
 }
-

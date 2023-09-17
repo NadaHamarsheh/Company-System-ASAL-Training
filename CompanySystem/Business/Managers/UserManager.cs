@@ -11,11 +11,16 @@ namespace Business.Managers
     {
         private readonly IRepository<User> _repository;
         private readonly IUserRoleManager _userRoleManager;
+        private readonly IUserDetailManager _userDetailManager;
+        private readonly IEmployeeDetailManager _employeeDetailManager;
 
-        public UserManager(IRepository<User> repository, IUserRoleManager userRoleManager)
+        public UserManager(IRepository<User> repository, IUserRoleManager userRoleManager,
+            IUserDetailManager userDetailManager, IEmployeeDetailManager employeeDetailManager)
         {
             _repository = repository;
             _userRoleManager = userRoleManager;
+            _userDetailManager = userDetailManager;
+            _employeeDetailManager = employeeDetailManager;
         }
 
         public async Task<IList<UserView>> GetAllUsers()
@@ -56,6 +61,12 @@ namespace Business.Managers
             _ = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
                         throw new Exception("User Role Not Found");
 
+            _ = await _userDetailManager.GetUserDetailById(model.UserDetailId) ??
+                       throw new Exception("User Detail Not Found");
+
+            _ = await _employeeDetailManager.GetEmployeeDetailById(model.EmployeeDetailId) ??
+                       throw new Exception("Employee Detail Not Found");
+
             var user = model.ModelToEntity() ??
                         throw new Exception("Problem in converting Model to Entity");
 
@@ -78,6 +89,12 @@ namespace Business.Managers
 
             _ = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
                         throw new Exception("User Role Not Found");
+
+            _ = await _userDetailManager.GetUserDetailById(model.UserDetailId) ??
+                       throw new Exception("User Detail Not Found");
+
+            _ = await _employeeDetailManager.GetEmployeeDetailById(model.EmployeeDetailId) ??
+                       throw new Exception("Employee Detail Not Found");
 
             existingUser.Email = model.Email;
             existingUser.Password = model.Password;

@@ -11,6 +11,10 @@ namespace Business.View
         public string Password { get; set; }
 
         public int UserRoleId { get; set; }
+
+        public int UserDetailId { get; set; }
+
+        public int EmployeeDetailId { get; set; }
     }
 }
 

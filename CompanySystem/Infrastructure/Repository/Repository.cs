@@ -37,5 +37,10 @@ namespace Infrastructure.Repository
         {
             return await _context.Users.Where(x => x.UserRoleId == id).ToListAsync();
         }
+
+        public async Task<IList<EmployeeDetail>> GetEmployeeByDepartment(int id)
+        {
+            return await _context.EmployeeDetails.Where(x => x.DepartmentId == id).ToListAsync();
+        }
     }
 }

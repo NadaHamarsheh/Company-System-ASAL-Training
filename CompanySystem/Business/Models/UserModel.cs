@@ -15,5 +15,11 @@ namespace Business.Models
 
         [Required]
         public int UserRoleId { get; set; }
+
+        [Required]
+        public int UserDetailId { get; set; }
+
+        [Required]
+        public int EmployeeDetailId { get; set; }
     }
 }

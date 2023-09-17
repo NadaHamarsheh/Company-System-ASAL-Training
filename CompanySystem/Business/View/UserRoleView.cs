@@ -11,4 +11,3 @@ namespace Business.View
         public string Description { get; set; }
     }
 }
-

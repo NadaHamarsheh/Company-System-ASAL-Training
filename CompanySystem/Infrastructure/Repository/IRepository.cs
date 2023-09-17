@@ -8,5 +8,6 @@ namespace Infrastructure.Repository
         Task<T> GetById(object id);
         Task<IList<User>> GetUsersByRole(int id);
         Task Update(object id, T entity);
+        Task<IList<EmployeeDetail>> GetEmployeeByDepartment(int id);
     }
 }
