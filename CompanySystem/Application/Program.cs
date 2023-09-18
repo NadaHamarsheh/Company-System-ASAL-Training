@@ -22,8 +22,8 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDepartmentManager, DepartmentManager>();
 builder.Services.AddScoped<IUserRoleManager, UserRoleManager>();
 builder.Services.AddScoped<IUserManager, UserManager>();
-builder.Services.AddScoped<IUserDetailManager, UserDetailManager>();
 builder.Services.AddScoped<IEmployeeDetailManager, EmployeeDetailManager>();
+builder.Services.AddScoped<IUserDetailManager, UserDetailManager>();
 
 var app = builder.Build();
 
