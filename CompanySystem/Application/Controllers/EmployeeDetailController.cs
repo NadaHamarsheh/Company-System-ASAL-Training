@@ -47,7 +47,7 @@ namespace Application.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<EmployeeDetailView>> CreateUser(EmployeeDetailModel model)
+        public async Task<ActionResult<EmployeeDetailView>> CreateEmployeeDetail(EmployeeDetailModel model)
         {
             try
             {
