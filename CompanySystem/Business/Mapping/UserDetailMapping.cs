@@ -26,7 +26,7 @@ namespace Business.Mapping
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Tel = user.Tel,
-                Photo = Convert.ToBase64String(user.Photo),
+               //Photo = Convert.ToBase64String(user.Photo),
                 Address = user.Address,
                 Experience = user.Experience,
                 CreatedOn = user.CreatedOn,
