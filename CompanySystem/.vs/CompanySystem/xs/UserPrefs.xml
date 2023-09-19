@@ -1,30 +1,33 @@
 ﻿<Properties StartupConfiguration="{A80CDEDA-4AEC-4233-8781-1C908B3A2792}|https">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Application/Program.cs">
     <Files>
-      <File FileName="Application/Controllers/EmployeeDetailController.cs" Line="68" Column="10" />
-      <File FileName="Application/Controllers/UserController.cs" Line="99" Column="9" />
-      <File FileName="Application/Program.cs" Line="27" Column="1" />
+      <File FileName="Application/Controllers/UserDetailController.cs" Line="41" Column="44" />
+      <File FileName="Business/Managers/UserDetailManager.cs" Line="65" Column="48" />
+      <File FileName="Business/Mapping/UserDetailMapping.cs" Line="17" Column="41" />
+      <File FileName="Business/Models/UserDetailModel.cs" Line="18" Column="24" />
+      <File FileName="Business/View/UserDetailView.cs" Line="14" Column="45" />
+      <File FileName="Infrastructure/Entities/UserDetail.cs" Line="19" Column="45" />
+      <File FileName="Application/Program.cs" Line="34" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CompanySystem">
-            <Node name="Application" expanded="True">
+          <Node name="CompanySystem" expanded="True">
+            <Node name="Application">
               <Node name="Controllers" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
-            <Node name="Business" expanded="True">
+            <Node name="Business">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="Interfaces" expanded="True" />
-              <Node name="Managers" expanded="True" />
               <Node name="Mapping" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="View" expanded="True" />
             </Node>
-            <Node name="Infrastructure" expanded="True">
-              <Node name="Entities" expanded="True" />
+            <Node name="Infrastructure">
               <Node name="Repository" expanded="True" />
             </Node>
           </Node>
@@ -32,7 +35,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/nadahamarsheh/ASAL/CompanySystem/Application/Controllers/UserDetailController.cs" relfile="Application/Controllers/UserDetailController.cs" line="40" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

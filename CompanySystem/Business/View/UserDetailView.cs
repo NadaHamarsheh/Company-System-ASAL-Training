@@ -10,7 +10,7 @@ namespace Business.View
 
         public string LastName { get; set; }
 
-        public byte[] Photo { get; set; }
+        //public string Photo { get; set; }
 
         public string Address { get; set; }
 

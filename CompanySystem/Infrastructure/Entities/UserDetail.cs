@@ -16,6 +16,7 @@ namespace Infrastructure
         [MaxLength(20)]
         public string LastName { get; set; }
 
+        [Column("Photo", TypeName = "image")]
         public byte[] Photo { get; set; }
 
         [MaxLength(40)]

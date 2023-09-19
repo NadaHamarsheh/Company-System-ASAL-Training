@@ -13,7 +13,6 @@ namespace Business.Mapping
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Tel = model.Tel,
-                Photo = model.Photo,
                 Address = model.Address,
                 Experience = model.Experience
             };
@@ -27,7 +26,7 @@ namespace Business.Mapping
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Tel = user.Tel,
-                Photo = user.Photo,
+                Photo = Convert.ToBase64String(user.Photo),
                 Address = user.Address,
                 Experience = user.Experience,
                 CreatedOn = user.CreatedOn,

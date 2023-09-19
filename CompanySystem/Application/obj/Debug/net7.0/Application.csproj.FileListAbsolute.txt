@@ -73,3 +73,14 @@
 /Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.AspNetCore.Razor.Language.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.CodeAnalysis.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.CodeAnalysis.CSharp.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.CodeAnalysis.Razor.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
+/Users/nadahamarsheh/ASAL/CompanySystem/Application/bin/Debug/net7.0/Application.staticwebassets.runtime.json

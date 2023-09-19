@@ -2,7 +2,6 @@
 using Business.View;
 using Business.Models;
 using Microsoft.AspNetCore.Mvc;
-using Business.Managers;
 
 namespace Application.Controllers
 {
@@ -34,11 +33,11 @@ namespace Application.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<UserDetailView>> CreateUserDetail(UserDetailModel model)
+        public async Task<ActionResult<UserDetailView>> CreateUserDetail([FromForm] UserDetailModel model)
         {
             try
             {
-                if (!ModelState.IsValid)
+                if (!ModelState.IsValid || model.Photo == null)
                     return null;
 
                 return await _userDetailManager.CreateUserDetail(model);
@@ -65,7 +64,7 @@ namespace Application.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult<UserDetailView>> UpdateUserDetail(int id, UserDetailModel model)
+        public async Task<ActionResult<UserDetailView>> UpdateUserDetail(int id, [FromForm] UserDetailModel model)
         {
             try
             {

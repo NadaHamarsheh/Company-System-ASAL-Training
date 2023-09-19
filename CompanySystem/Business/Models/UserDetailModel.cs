@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace Business.Models
 {
@@ -12,7 +13,8 @@ namespace Business.Models
         [MaxLength(20)]
         public string LastName { get; set; }
 
-        public byte[] Photo { get; set; }
+        [Required]
+        public IFormFile Photo { get; set; }
 
         [MaxLength(40)]
         public string Address { get; set; }

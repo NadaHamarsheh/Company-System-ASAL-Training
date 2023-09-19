@@ -27,9 +27,14 @@ namespace Business.Managers
 
         public async Task<UserDetailView> CreateUserDetail(UserDetailModel model)
         {
+            MemoryStream stream = new MemoryStream();
+
+            await model.Photo.CopyToAsync(stream);
+
             var user = model.ModelToEntity() ??
                         throw new Exception("Problem in converting Model to Entity");
 
+            user.Photo = stream.ToArray();
             user.CreatedBy = "Nada";
             user.CreatedOn = DateTime.Now;
             user.IsDeleted = false;
@@ -60,9 +65,13 @@ namespace Business.Managers
             if (existingUser.IsDeleted)
                 throw new Exception("User Detail is already Deleted");
 
+            MemoryStream stream = new MemoryStream();
+
+            await model.Photo.CopyToAsync(stream);
+
             existingUser.FirstName = model.FirstName;
             existingUser.LastName = model.LastName;
-            existingUser.Photo = model.Photo;
+            existingUser.Photo = stream.ToArray();
             existingUser.Address = model.Address;
             existingUser.Tel = model.Tel;
             existingUser.Experience = model.Experience;

@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "Ee4K7z+QMe0erAzf/Epl3d7uS+cp6yJzWSmXR2jB4Cs=",
+  "Hash": "oYA9BFLi42Zp4GYkoSQLtNULV0MTL78XSi0Prj/OONM=",
   "Source": "Application",
   "BasePath": "_content/Application",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Application/wwwroot",
+      "Source": "Application",
+      "ContentRoot": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/",
+      "BasePath": "_content/Application",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
