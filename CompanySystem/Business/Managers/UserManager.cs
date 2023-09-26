@@ -59,6 +59,7 @@ namespace Business.Managers
         public async Task<UserView> CreateUser(UserModel model)
         {
             int? leaderId = null;
+
             _ = await _userDetailManager.GetUserDetailById(model.UserDetailId) ??
                        throw new Exception("User Detail Not Found");
 
@@ -101,14 +102,13 @@ namespace Business.Managers
 
         public async Task<UserView> UpdateUser(int id, UserModel model)
         {
+            int? leaderId = null;
+
             var existingUser = await _repository.GetById(id) ??
                                 throw new Exception("User Not Found");
 
             if (existingUser.IsDeleted)
                 throw new Exception("User is already Deleted");
-
-            _ = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
-                        throw new Exception("User Role Not Found");
 
             _ = await _userDetailManager.GetUserDetailById(model.UserDetailId) ??
                        throw new Exception("User Detail Not Found");
@@ -116,9 +116,34 @@ namespace Business.Managers
             _ = await _employeeDetailManager.GetEmployeeDetailById(model.EmployeeDetailId) ??
                        throw new Exception("Employee Detail Not Found");
 
+            var userRole = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
+                        throw new Exception("User Role Not Found");
+
+            if (model.LeaderId != 0)
+            {
+                var leader = await GetUserById(model.LeaderId) ??
+                       throw new Exception("Leader is not a User");
+
+                var leaderRole = await _userRoleManager.GetUserRoleById(leader.UserRoleId) ??
+                        throw new Exception("Leader Role Not Found");
+
+                if (leaderRole.Name.ToLower() == "leader")
+                {
+                    if (userRole.Name.ToLower() != "employee")
+                        return null;
+                }
+                else
+                    return null;
+
+                leaderId = model.LeaderId;
+            }
+
             existingUser.Email = model.Email;
             existingUser.Password = model.Password;
             existingUser.UserRoleId = model.UserRoleId;
+            existingUser.UserDetailId = model.UserDetailId;
+            existingUser.EmployeeDetailId = model.EmployeeDetailId;
+            existingUser.LeaderId = leaderId;
             existingUser.ModifiedBy = "Nada";
             existingUser.ModifiedOn = DateTime.Now;
 
