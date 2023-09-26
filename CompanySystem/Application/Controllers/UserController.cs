@@ -55,7 +55,7 @@ namespace Application.Controllers
                     return null;
 
                 return await _userManager.CreateUser(model) ??
-                    throw new Exception ("There is an error in the UserRole with the Leader Id");
+                    throw new Exception("There is an error in the UserRole with the Leader Id");
             }
             catch (Exception ex)
             {

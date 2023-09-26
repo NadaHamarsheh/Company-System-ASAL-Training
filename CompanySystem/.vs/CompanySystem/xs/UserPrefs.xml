@@ -1,22 +1,35 @@
 ﻿<Properties StartupConfiguration="{A80CDEDA-4AEC-4233-8781-1C908B3A2792}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Application/Controllers/UserController.cs">
+    <Files>
+      <File FileName="Infrastructure/Entities/User.cs" Line="36" Column="2" />
+      <File FileName="Business/View/UserView.cs" Line="19" Column="20" />
+      <File FileName="Business/Models/UserModel.cs" Line="25" Column="19" />
+      <File FileName="Business/Mapping/UserMapping.cs" Line="11" Column="53" />
+      <File FileName="Business/Managers/UserManager.cs" Line="72" Column="37" />
+      <File FileName="Application/Controllers/UserController.cs" Line="57" Column="81" />
+      <File FileName="Infrastructure/CompanySystemContext.cs" Line="23" Column="59" />
+      <File FileName="Business/Managers/UserDetailManager.cs" Line="58" Column="1" />
+      <File FileName="Infrastructure/Repository/Repository.cs" Line="27" Column="1" />
+      <File FileName="Business/Mapping/UserDetailMapping.cs" Line="38" Column="1" />
+      <File FileName="Business/Managers/EmployeeDetailManager.cs" Line="58" Column="1" />
+      <File FileName="Business/Mapping/EmployeeDetailMapping.cs" Line="35" Column="1" />
+      <File FileName="Business/Managers/UserRoleManager.cs" Line="53" Column="1" />
+      <File FileName="Business/Mapping/UserRoleMapping.cs" Line="31" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CompanySystem">
-            <Node name="Application" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="Business" expanded="True">
-              <Node name="Interfaces" expanded="True" />
-              <Node name="Managers" expanded="True">
-                <Node name="UserDetailManager.cs" selected="True" />
+            <Node name="Application">
+              <Node name="Controllers">
+                <Node name="UserController.cs" selected="True" />
               </Node>
+            </Node>
+            <Node name="Business">
+              <Node name="Interfaces" expanded="True" />
               <Node name="Mapping" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="View" expanded="True" />
@@ -30,6 +43,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
