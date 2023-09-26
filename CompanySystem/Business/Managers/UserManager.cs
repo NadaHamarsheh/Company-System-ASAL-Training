@@ -58,18 +58,38 @@ namespace Business.Managers
 
         public async Task<UserView> CreateUser(UserModel model)
         {
-            _ = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
-                        throw new Exception("User Role Not Found");
-
+            int? leaderId = null;
             _ = await _userDetailManager.GetUserDetailById(model.UserDetailId) ??
                        throw new Exception("User Detail Not Found");
 
             _ = await _employeeDetailManager.GetEmployeeDetailById(model.EmployeeDetailId) ??
                        throw new Exception("Employee Detail Not Found");
 
+            var userRole = await _userRoleManager.GetUserRoleById(model.UserRoleId) ??
+                        throw new Exception("User Role Not Found");
+
+            if (model.LeaderId != 0)
+            {
+                var leader = await GetUserById(model.LeaderId) ??
+                       throw new Exception("Leader is not a User");
+
+                var leaderRole = await _userRoleManager.GetUserRoleById(leader.UserRoleId) ??
+                        throw new Exception("Leader Role Not Found");
+
+                if (leaderRole.Name.ToLower() == "leader")
+                {
+                    if (userRole.Name.ToLower() != "employee")
+                        return null;
+                }
+                else
+                    return null;
+
+                leaderId = model.LeaderId;
+            }
+
             var user = model.ModelToEntity() ??
                         throw new Exception("Problem in converting Model to Entity");
-
+            user.LeaderId = leaderId;
             user.CreatedBy = "Nada";
             user.CreatedOn = DateTime.Now;
 

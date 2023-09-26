@@ -14,7 +14,8 @@ namespace Business.Mapping
                 Password = model.Password,
                 UserRoleId = model.UserRoleId,
                 UserDetailId = model.UserDetailId,
-                EmployeeDetailId = model.EmployeeDetailId
+                EmployeeDetailId = model.EmployeeDetailId,
+                LeaderId = model.LeaderId
             };
         }
 
@@ -28,6 +29,7 @@ namespace Business.Mapping
                 UserRoleId = user.UserRoleId,
                 UserDetailId = user.UserDetailId,
                 EmployeeDetailId = user.EmployeeDetailId,
+                LeaderId = user.LeaderId,
                 CreatedOn = user.CreatedOn,
                 CreatedBy = user.CreatedBy,
                 ModifiedOn = user.ModifiedOn,

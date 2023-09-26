@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(CompanySystemContext))]
-    [Migration("20230916115331_create")]
+    [Migration("20230926074144_create")]
     partial class create
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.10")
+                .HasAnnotation("ProductVersion", "7.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -127,6 +127,9 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("LeaderId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -147,6 +150,8 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("EmployeeDetailId")
                         .IsUnique();
+
+                    b.HasIndex("LeaderId");
 
                     b.HasIndex("UserDetailId")
                         .IsUnique();
@@ -196,7 +201,8 @@ namespace Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<byte[]>("Photo")
-                        .HasColumnType("varbinary(max)");
+                        .HasColumnType("image")
+                        .HasColumnName("Photo");
 
                     b.Property<string>("Tel")
                         .HasMaxLength(15)
@@ -262,6 +268,12 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Infrastructure.User", "Leader")
+                        .WithMany("Employees")
+                        .HasForeignKey("LeaderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Infrastructure.UserDetail", "UserDetails")
                         .WithOne("Users")
                         .HasForeignKey("Infrastructure.User", "UserDetailId")
@@ -276,6 +288,8 @@ namespace Infrastructure.Migrations
 
                     b.Navigation("EmployeeDetail");
 
+                    b.Navigation("Leader");
+
                     b.Navigation("UserDetails");
 
                     b.Navigation("UserRole");
@@ -289,6 +303,11 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Infrastructure.EmployeeDetail", b =>
                 {
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Infrastructure.User", b =>
+                {
+                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("Infrastructure.UserDetail", b =>

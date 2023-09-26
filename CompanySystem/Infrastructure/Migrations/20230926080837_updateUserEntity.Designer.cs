@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(CompanySystemContext))]
-    [Migration("20230919073749_updatecreate")]
-    partial class updatecreate
+    [Migration("20230926080837_updateUserEntity")]
+    partial class updateUserEntity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -127,6 +127,9 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("LeaderId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -147,6 +150,8 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("EmployeeDetailId")
                         .IsUnique();
+
+                    b.HasIndex("LeaderId");
 
                     b.HasIndex("UserDetailId")
                         .IsUnique();
@@ -263,6 +268,11 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Infrastructure.User", "Leader")
+                        .WithMany("Employees")
+                        .HasForeignKey("LeaderId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Infrastructure.UserDetail", "UserDetails")
                         .WithOne("Users")
                         .HasForeignKey("Infrastructure.User", "UserDetailId")
@@ -277,6 +287,8 @@ namespace Infrastructure.Migrations
 
                     b.Navigation("EmployeeDetail");
 
+                    b.Navigation("Leader");
+
                     b.Navigation("UserDetails");
 
                     b.Navigation("UserRole");
@@ -290,6 +302,11 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Infrastructure.EmployeeDetail", b =>
                 {
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Infrastructure.User", b =>
+                {
+                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("Infrastructure.UserDetail", b =>

@@ -27,5 +27,10 @@ namespace Infrastructure
         [ForeignKey("EmployeeDetailId")]
         public int EmployeeDetailId { get; set; }
         public EmployeeDetail EmployeeDetail { get; set; }
+
+        [ForeignKey("LeaderId")]
+        public int? LeaderId { get; set; }
+        public ICollection<User> Employees { get; set; }
+        public User Leader { get; set; }
     }
 }

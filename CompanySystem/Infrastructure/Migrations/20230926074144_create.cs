@@ -38,7 +38,7 @@ namespace Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
-                    Photo = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    Photo = table.Column<byte[]>(type: "image", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: true),
                     Tel = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
                     Experience = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: true),
@@ -110,6 +110,7 @@ namespace Infrastructure.Migrations
                     UserRoleId = table.Column<int>(type: "int", nullable: false),
                     UserDetailId = table.Column<int>(type: "int", nullable: false),
                     EmployeeDetailId = table.Column<int>(type: "int", nullable: false),
+                    LeaderId = table.Column<int>(type: "int", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -137,6 +138,12 @@ namespace Infrastructure.Migrations
                         principalTable: "UserRole",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_User_User_LeaderId",
+                        column: x => x.LeaderId,
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -149,6 +156,11 @@ namespace Infrastructure.Migrations
                 table: "User",
                 column: "EmployeeDetailId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_LeaderId",
+                table: "User",
+                column: "LeaderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_User_UserDetailId",

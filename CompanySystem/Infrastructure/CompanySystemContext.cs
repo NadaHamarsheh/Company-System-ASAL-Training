@@ -18,14 +18,20 @@ namespace Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserDetail>()
-             .HasOne(a => a.Users)
-             .WithOne(b => b.UserDetails)
-             .HasForeignKey<User>(b => b.UserDetailId);
+                .HasOne(a => a.Users)
+                .WithOne(b => b.UserDetails)
+                .HasForeignKey<User>(b => b.UserDetailId);
 
             modelBuilder.Entity<EmployeeDetail>()
-             .HasOne(a => a.User)
-             .WithOne(b => b.EmployeeDetail)
-             .HasForeignKey<User>(b => b.EmployeeDetailId);
+                .HasOne(a => a.User)
+                .WithOne(b => b.EmployeeDetail)
+                .HasForeignKey<User>(b => b.EmployeeDetailId);
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Employees)
+                .WithOne(u => u.Leader)
+                .HasForeignKey(u => u.LeaderId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

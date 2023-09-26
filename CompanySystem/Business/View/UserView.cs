@@ -15,6 +15,8 @@ namespace Business.View
         public int UserDetailId { get; set; }
 
         public int EmployeeDetailId { get; set; }
+
+        public int? LeaderId { get; set; }
     }
 }
 

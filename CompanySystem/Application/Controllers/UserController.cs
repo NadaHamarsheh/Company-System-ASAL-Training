@@ -54,7 +54,8 @@ namespace Application.Controllers
                 if (!ModelState.IsValid)
                     return null;
 
-                return await _userManager.CreateUser(model);
+                return await _userManager.CreateUser(model) ??
+                    throw new Exception ("There is an error in the UserRole with the Leader Id");
             }
             catch (Exception ex)
             {

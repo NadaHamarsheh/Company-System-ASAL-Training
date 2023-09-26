@@ -21,5 +21,7 @@ namespace Business.Models
 
         [Required]
         public int EmployeeDetailId { get; set; }
+
+        public int LeaderId { get; set; }
     }
 }
