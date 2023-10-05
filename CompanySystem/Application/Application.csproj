@@ -21,9 +21,15 @@
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\photo\" />
+    <Content Remove="wwwroot\css\" />
+    <Content Remove="wwwroot\js\" />
+    <Content Remove="wwwroot\html\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\photo\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\html\" />
   </ItemGroup>
 </Project>

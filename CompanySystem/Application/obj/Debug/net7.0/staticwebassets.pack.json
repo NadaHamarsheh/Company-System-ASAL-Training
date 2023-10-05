@@ -1,20 +1,12 @@
 {
   "Files": [
     {
-      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/obj/Debug/net7.0/scopedcss/projectbundle/Application.bundle.scp.css",
-      "PackagePath": "staticwebassets/Application.bundle.scp.css"
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/css/HomePageStyle.css",
+      "PackagePath": "staticwebassets/css/HomePageStyle.css"
     },
     {
-      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/css/site.css",
-      "PackagePath": "staticwebassets/css/site.css"
-    },
-    {
-      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/favicon.ico",
-      "PackagePath": "staticwebassets/favicon.ico"
-    },
-    {
-      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/js/site.js",
-      "PackagePath": "staticwebassets/js/site.js"
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
     },
     {
       "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/lib/bootstrap/LICENSE",
@@ -243,6 +235,10 @@
     {
       "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/photo/CompanyPicture.jpeg",
+      "PackagePath": "staticwebassets/photo/CompanyPicture.jpeg"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Application.Microsoft.AspNetCore.StaticWebAssets.props",
