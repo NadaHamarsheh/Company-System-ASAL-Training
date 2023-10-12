@@ -1,12 +1,28 @@
 {
   "Files": [
     {
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/css/DepartmentMainPageStyle.css",
+      "PackagePath": "staticwebassets/css/DepartmentMainPageStyle.css"
+    },
+    {
       "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/css/HomePageStyle.css",
       "PackagePath": "staticwebassets/css/HomePageStyle.css"
     },
     {
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/html/DepartmentMainPage.html",
+      "PackagePath": "staticwebassets/html/DepartmentMainPage.html"
+    },
+    {
       "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/js/DepartmentMainPageJS.js",
+      "PackagePath": "staticwebassets/js/DepartmentMainPageJS.js"
     },
     {
       "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/lib/bootstrap/LICENSE",
@@ -237,8 +253,12 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/photo/CompanyPicture.jpeg",
-      "PackagePath": "staticwebassets/photo/CompanyPicture.jpeg"
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/photo/.DS_Store",
+      "PackagePath": "staticwebassets/photo/.DS_Store"
+    },
+    {
+      "Id": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/photo/Company.jpeg",
+      "PackagePath": "staticwebassets/photo/Company.jpeg"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Application.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nnnNs1Uzb530KkCvStHC4lR9yw3khHISe9FuR07Iu+c=",
+  "Hash": "jpR1wSn6HvOPVNF5Qz0w+CkU7SkfoLVVb1lF0A8tAWo=",
   "Source": "Application",
   "BasePath": "_content/Application",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/.DS_Store",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/",
+      "BasePath": "_content/Application",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
+    },
+    {
+      "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/css/DepartmentMainPageStyle.css",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/",
+      "BasePath": "_content/Application",
+      "RelativePath": "css/DepartmentMainPageStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/DepartmentMainPageStyle.css"
+    },
     {
       "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/css/HomePageStyle.css",
       "SourceId": "Application",
@@ -34,6 +68,23 @@
       "OriginalItemSpec": "wwwroot/css/HomePageStyle.css"
     },
     {
+      "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/html/DepartmentMainPage.html",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/",
+      "BasePath": "_content/Application",
+      "RelativePath": "html/DepartmentMainPage.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/html/DepartmentMainPage.html"
+    },
+    {
       "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/index.html",
       "SourceId": "Application",
       "SourceType": "Discovered",
@@ -49,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/js/DepartmentMainPageJS.js",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/",
+      "BasePath": "_content/Application",
+      "RelativePath": "js/DepartmentMainPageJS.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/DepartmentMainPageJS.js"
     },
     {
       "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
@@ -1020,12 +1088,12 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
     },
     {
-      "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/photo/CompanyPicture.jpeg",
+      "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/photo/.DS_Store",
       "SourceId": "Application",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/",
       "BasePath": "_content/Application",
-      "RelativePath": "photo/CompanyPicture.jpeg",
+      "RelativePath": "photo/.DS_Store",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1034,7 +1102,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/photo/CompanyPicture.jpeg"
+      "OriginalItemSpec": "wwwroot/photo/.DS_Store"
+    },
+    {
+      "Identity": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/photo/Company.jpeg",
+      "SourceId": "Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nadahamarsheh/ASAL/CompanySystem/Application/wwwroot/",
+      "BasePath": "_content/Application",
+      "RelativePath": "photo/Company.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/photo/Company.jpeg"
     }
   ]
 }

@@ -1,0 +1,75 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-image: linear-gradient(#023e8a, #0077b6);
+    color: white;
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.CompanyName {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+
+#PageMainPart {
+    width: 100%;
+    height:100vh;
+    padding: 0px 50px;
+    padding-top: 20px;
+    background-color: #caf0f8;
+}
+
+.PageMainPart h1 {
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #0077b6;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    color: black;
+}
